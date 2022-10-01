@@ -7,13 +7,13 @@ app.use(compression());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// //DB Connection
-// require("./src/database/db").connection();
+//DB Connection
+require("./src/database/db").connection();
 
 // //Routes
 // const routes = require("./src/routes/index");
 // app.use("/", routes);
-
+ 
 app.get('/', function(req, res) {
   res.send('Todo list backend v1')
 })
