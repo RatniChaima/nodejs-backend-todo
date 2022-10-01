@@ -11,8 +11,8 @@ app.use(express.json());
 require("./src/database/db").connection();
 
 // //Routes
-// const routes = require("./src/routes/index");
-// app.use("/", routes);
+const routes = require("./src/routes/index");
+app.use("/", routes);
  
 app.get('/', function(req, res) {
   res.send('Todo list backend v1')
