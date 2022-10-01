@@ -14,7 +14,7 @@ async function connection() {
 
 function createSchema(schema) {
   return new mongoose.Schema(schema, {
-    timestamps: true,
+    timestamps: true, // create auto createdAt, updateAt
   });
 }
 
