@@ -1,11 +1,11 @@
 const express = require('express');
-//const cors = require("cors");
-//const compression = require("compression");
-const app = express()
-//const app = express().use("*", cors());
-// app.use(compression());
-// app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
+const cors = require("cors");
+const compression = require("compression");
+
+const app = express().use("*", cors());
+app.use(compression());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // //DB Connection
 // require("./src/database/db").connection();
